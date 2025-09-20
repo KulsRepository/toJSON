@@ -87,6 +87,7 @@
     </div>
 
     <script>
+        // this is where the script starts :D, first I'll declare constants to deal with file operations. we are using getElementById which is from the document interface
         const form = document.getElementById('convert-form');
         const statusMessage = document.getElementById('status-message');
         const fileUpload = document.getElementById('file-upload');
@@ -98,7 +99,7 @@
         const downloadButton = document.getElementById('download-button');
         const copyButton = document.getElementById('copy-button');
 
-        // Event listener for file selection via click
+        // Next up is the event listener for the file selection via click :p
         fileUpload.addEventListener('change', () => {
             if (fileUpload.files.length > 0) {
                 fileNameDisplay.textContent = `File selected: ${fileUpload.files[0].name}`;
@@ -107,7 +108,7 @@
             }
         });
 
-        // Event listeners for drag and drop
+        // Event listeners for the drag and drop hehe
         dropZone.addEventListener('dragover', (e) => {
             e.preventDefault();
             dropZone.classList.add('drag-over');
@@ -128,7 +129,7 @@
             }
         });
 
-        // Main form submission logic
+        // The main form submission system:
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
